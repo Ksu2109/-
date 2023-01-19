@@ -1,0 +1,80 @@
+//define ON_Cleaner PORTC |= (1<<4)
+//define OFF_Cleaner PORTC &= ~(1<<4)
+//void M_drive(signed char l_vector, char l_speed, signed char r_vector, char r_speed);
+//void Timer_ControlTimer(void); //служба таймеров
+//void Timer_Task(int* Time);    //установка задач в очередь таймеров
+//void led()
+{
+    //if (led_time != 0)                       //если время не пришло
+    {
+       ////// return;
+    }
+
+   // if (Mode > 0)                   //если уборка
+    {
+        //if (PORTC & (1 << 5))
+        {
+           // PORTC &= ~(1 << 5);
+
+            //led_time = 300;           //тушим на 0.3 сек
+            //Timer_Task(&led_time);
+        }
+        //else
+        {
+            //PORTC |= (1 << 5);
+
+            //led_time = 200;           //включаем на 0.2 сек
+            //Timer_Task(&led_time);
+        }
+    }
+    //else                           //если режим ожидания
+    {
+       // if (PORTC & (1 << 5))
+        {
+            //PORTC &= ~(1 << 5);
+
+            //led_time = 1000;
+            //Timer_Task(&led_time);    //тушим на 2.5 сек
+        }
+       // else
+        {
+            //PORTC |= (1 << 5);
+
+            //led_time = 1000;
+            //Timer_Task(&led_time);    //включаем на 1 сек
+        }
+    }
+}
+//int main(void)
+{
+    //Periphery();            //настройка периферии
+
+    //главный цикл программы
+    //while (1)
+    {
+        //button();         //обработчик кнопки mode
+        //cycle();          //управление циклом уборки
+        //drive();          //привод
+        //cleaner();        //уборочный узел
+        //bumper();         //бампер
+        //led();            //индикатор режима работы
+    }
+}
+//void util_mode(char _mode)
+{
+    //if (_mode >= AMOUNT_MODE)    //если такого режима не существует
+    {
+        //Mode = 0;
+    }
+    //else
+    {
+        //Mode = _mode;
+    }
+
+    //сброс переменных и счетчиков
+    //drive_counter = 0;
+    //bumper_counter = 0;
+
+   // drive_time = 0;
+    //led_time = 0;
+}
